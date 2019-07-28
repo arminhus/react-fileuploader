@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
 import "../styles/SearchBar.css";
-import SearchBox from "../components/SearchBox";
-import FilterOptions from "../components/FilterOptions";
+import SearchBox from "./SearchBox";
+import FilterOptions from "./FilterOptions";
 
 class SearchBar extends Component {
   render() {
