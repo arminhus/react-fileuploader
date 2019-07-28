@@ -1,12 +1,19 @@
 import React, { Component } from "react";
+
 import "../styles/FilterableList.css";
 import ListItem from "./ListItem";
 
 class FilterableList extends Component {
   render() {
-    const list = this.props.files.map((file, key) => (
-      <ListItem {...file} key={key} />
-    ));
+    const { searchTerm, filterOption } = this.props;
+    const list = this.props.files
+      .filter(
+        file =>
+          file.name.includes(searchTerm) &&
+          (filterOption === "All" || file.status === filterOption)
+      )
+      .map((file, key) => <ListItem {...file} key={key} />);
+
     return <div className="FilterableList">{list}</div>;
   }
 }
