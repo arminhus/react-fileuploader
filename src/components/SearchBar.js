@@ -12,7 +12,10 @@ class SearchBar extends Component {
           <h1>File Uploader</h1>
         </div>
         <div className="SearchBar-controls">
-          <SearchBox searchTerm={this.props.searchTerm} />
+          <SearchBox
+            searchTerm={this.props.searchTerm}
+            handleUpdate={this.props.handleUpdate}
+          />
           <FilterOptions FilterOptions={this.props.FilterOptions} />
         </div>
       </div>
