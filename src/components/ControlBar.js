@@ -11,13 +11,13 @@ class ControlBar extends Component {
   render() {
     return (
       <div className="ControlBar">
-        <div className="ControlBar__btn">
+        <div className="ControlBar-btn">
           <FontAwesomeIcon icon={faRedoAlt} />
         </div>
-        <div className="ControlBar__btn">
+        <div className="ControlBar-btnn">
           <FontAwesomeIcon icon={faTrashAlt} />
         </div>
-        <div className="ControlBar__btn">
+        <div className="ControlBar-btn">
           <FontAwesomeIcon icon={faCloudDownloadAlt} />
         </div>
       </div>

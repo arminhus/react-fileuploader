@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 class FilterOptions extends Component {
   render() {
+    const { filterOption } = this.props;
     return (
       <div className="FilterOptions">
         <div className="FilterOptions-option">
           <label htmlFor="filter-all">
-            <input type="radio" value="All" id="filter_all" name="filter" />
+            <input
+              type="radio"
+              value="All"
+              id="filter-all"
+              name="filter"
+              checked={filterOption === "All"}
+            />
             All
           </label>
         </div>
@@ -14,8 +21,9 @@ class FilterOptions extends Component {
             <input
               type="radio"
               value="Uploaded"
-              id="filter_uploaded"
+              id="filter-uploaded"
               name="filter"
+              checked={filterOption === "Uploaded"}
             />
             Uploaded
           </label>
@@ -25,15 +33,22 @@ class FilterOptions extends Component {
             <input
               type="radio"
               value="Synced"
-              id="filter_synced"
+              id="filter-synced"
               name="filter"
+              checked={filterOption === "Synced"}
             />
             Synced
           </label>
         </div>
         <div className="FilterOptions-option">
           <label htmlFor="filter-new">
-            <input type="radio" value="New" id="filter_new" name="filter" />
+            <input
+              type="radio"
+              value="New"
+              id="filter-new"
+              name="filter"
+              checked={filterOption === "New"}
+            />
             New
           </label>
         </div>
